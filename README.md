@@ -102,25 +102,11 @@ Les référentiels (régions, tranches d'âge, prescripteurs, classes de psychot
 - **Lits localisés au lieu de l'établissement** : un établissement peut accueillir des patients des départements voisins, ce qui surestime la densité de lits de son département et sous-estime celle de ses voisins.
 - **Populations récentes** : provisoires (2024) ou précoces (2025-2026), elles seront révisées par l'INSEE.
 
-## Reproduire le projet
-
-1. Créer un bucket S3 et lancer les scripts du dossier `ingestion/` depuis AWS CloudShell.
-2. Déclarer les tables externes dans Athena (base `sante_mentale_raw`).
-3. Configurer un profil dbt de type `athena` (voir la [documentation dbt-athena](https://docs.getdbt.com/docs/core/connect-data-platform/athena-setup)), puis :
-
-```bash
-python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-dbt deps
-dbt seed
-dbt build
-```
-
 ## Pistes
 
 - Intégration des temps d'accès aux soins (distance au premier psychiatre ou au premier établissement).
 - Orchestration de l'ingestion (EventBridge et Lambda, ou Step Functions).
-- Visualisation cartographique des déserts psychiatriques par département.
+- Carte interactive par département (psychiatres, psychologues, lits et places), avec l'évolution depuis 2012.
 
 ---
 
