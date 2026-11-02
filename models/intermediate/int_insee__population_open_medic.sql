@@ -10,6 +10,7 @@ with agregee as (
     from {{ ref('stg_insee__population') }} as p
     inner join {{ ref('ref_regions_insee') }} as r
         on p.region_insee_code = r.region_insee_code
+       and r.inclus_denominateur
     inner join {{ ref('ref_classes_age_insee') }} as a
         on p.classe_age_insee = a.classe_age_insee
     group by 1, 2, 3, 4

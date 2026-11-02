@@ -1,19 +1,19 @@
-region_code,region_insee_code,region_insee_libelle
-5,01,Guadeloupe
-5,02,Martinique
-5,03,Guyane
-5,04,La Réunion
-5,06,Mayotte
-11,11,Île-de-France
-24,24,Centre-Val de Loire
-27,27,Bourgogne-Franche-Comté
-28,28,Normandie
-32,32,Hauts-de-France
-44,44,Grand Est
-52,52,Pays de la Loire
-53,53,Bretagne
-75,75,Nouvelle-Aquitaine
-76,76,Occitanie
-84,84,Auvergne-Rhône-Alpes
-93,93,Provence-Alpes-Côte d'Azur
-93,94,Corse
+region_code,region_insee_code,region_insee_libelle,inclus_denominateur
+5,01,Guadeloupe,true
+5,02,Martinique,true
+5,03,Guyane,true
+5,04,La Réunion,true
+5,06,Mayotte,false
+11,11,Île-de-France,true
+24,24,Centre-Val de Loire,true
+27,27,Bourgogne-Franche-Comté,true
+28,28,Normandie,true
+32,32,Hauts-de-France,true
+44,44,Grand Est,true
+52,52,Pays de la Loire,true
+53,53,Bretagne,true
+75,75,Nouvelle-Aquitaine,true
+76,76,Occitanie,true
+84,84,Auvergne-Rhône-Alpes,true
+93,93,Provence-Alpes-Côte d'Azur,true
+93,94,Corse,true

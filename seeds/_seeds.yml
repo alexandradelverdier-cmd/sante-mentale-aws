@@ -9,9 +9,9 @@ seeds:
       - name: region_code
         tests: [unique, not_null]
   - name: ref_regions_insee
-    description: "Passage des régions Open Medic vers les codes région INSEE, pour agréger les populations au même périmètre."
+    description: "Passage des régions Open Medic vers les codes INSEE. inclus_denominateur = false pour Mayotte : couverture par Open Medic non confirmée (régime CSSM distinct). Hypothèse à basculer ici si besoin."
     config:
-      column_types: {region_code: varchar, region_insee_code: varchar}
+      column_types: {region_code: varchar, region_insee_code: varchar, inclus_denominateur: boolean}
   - name: ref_tranches_age
     config:
       column_types: {tranche_age_code: varchar}
