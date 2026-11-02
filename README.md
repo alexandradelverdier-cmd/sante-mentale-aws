@@ -4,6 +4,8 @@ Projet personnel d'analytics engineering sur une stack AWS (S3, Athena, dbt).
 
 Infirmière pendant 8 ans, dont plusieurs années en psychiatrie et neurologie au Centre Hospitalier de Montauban, j'ai voulu objectiver une question que j'ai rencontrée sur le terrain : **les territoires qui manquent de psychiatres et de psychologues consomment-ils davantage de psychotropes ?** L'idée sous-jacente : faute d'accès à un spécialiste, le médecin généraliste compenserait par le médicament.
 
+![Densité de psychiatres libéraux par département en 2024](docs/carte_psychiatres_liberaux_2024.png)
+
 ## Principaux résultats
 
 **1. Près de 6,9 millions de personnes** ont eu au moins un antidépresseur remboursé en 2025, soit environ 1 personne sur 10. La hausse est générale (+3 à +5 % en un an dans toutes les régions).

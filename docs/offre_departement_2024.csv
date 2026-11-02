@@ -1,0 +1,102 @@
+departement_code;departement_libelle;region_insee_libelle;population;nb_psychiatres_liberaux_mixtes;densite_psychiatres_liberaux_mixtes;densite_psychiatres;densite_psychologues
+01;Ain;Auvergne-Rhône-Alpes;685867;21;3.1;9.2;91.4
+02;Aisne;Hauts-de-France;521077;21;4.0;12.1;77.0
+03;Allier;Auvergne-Rhône-Alpes;332221;13;3.9;15.4;90.6
+04;Alpes-de-Haute-Provence;Provence-Alpes-Côte d'Azur;168835;12;7.1;15.4;110.2
+05;Hautes-Alpes;Provence-Alpes-Côte d'Azur;144264;9;6.2;22.9;131.0
+06;Alpes-Maritimes;Provence-Alpes-Côte d'Azur;1137058;229;20.1;33.8;123.8
+07;Ardèche;Auvergne-Rhône-Alpes;335612;9;2.7;12.5;87.0
+08;Ardennes;Grand Est;264406;11;4.2;9.8;90.8
+09;Ariège;Occitanie;156158;11;7.0;14.1;107.6
+10;Aube;Grand Est;309743;6;1.9;8.1;92.3
+11;Aude;Occitanie;380655;24;6.3;17.3;89.1
+12;Aveyron;Occitanie;279184;13;4.7;14.7;83.8
+13;Bouches-du-Rhône;Provence-Alpes-Côte d'Azur;2098481;394;18.8;35.9;122.7
+14;Calvados;Normandie;712763;49;6.9;23.9;122.8
+15;Cantal;Auvergne-Rhône-Alpes;143983;4;2.8;13.2;84.0
+16;Charente;Nouvelle-Aquitaine;352712;13;3.7;13.3;102.9
+17;Charente-Maritime;Nouvelle-Aquitaine;677063;43;6.4;16.5;103.8
+18;Cher;Centre-Val de Loire;297369;9;3.0;13.5;92.5
+19;Corrèze;Nouvelle-Aquitaine;241041;7;2.9;11.2;90.4
+21;Côte-d'Or;Bourgogne-Franche-Comté;540943;48;8.9;25.9;124.6
+22;Côtes-d'Armor;Bretagne;613675;30;4.9;14.7;94.7
+23;Creuse;Nouvelle-Aquitaine;115406;6;5.2;13.9;107.4
+24;Dordogne;Nouvelle-Aquitaine;418922;18;4.3;13.4;101.5
+25;Doubs;Bourgogne-Franche-Comté;547024;36;6.6;23.6;117.0
+26;Drôme;Auvergne-Rhône-Alpes;525717;20;3.8;14.8;102.5
+27;Eure;Normandie;603231;25;4.1;10.9;79.2
+28;Eure-et-Loir;Centre-Val de Loire;433268;10;2.3;10.6;84.5
+29;Finistère;Bretagne;937401;63;6.7;21.0;97.7
+2A;Corse-du-Sud;Corse;170548;17;10.0;23.5;73.3
+2B;Haute-Corse;Corse;188285;19;10.1;21.2;80.7
+30;Gard;Occitanie;776271;59;7.6;18.7;90.8
+31;Haute-Garonne;Occitanie;1487248;227;15.3;29.8;161.7
+32;Gers;Occitanie;192545;11;5.7;13.0;93.5
+33;Gironde;Nouvelle-Aquitaine;1705851;330;19.3;34.9;132.7
+34;Hérault;Occitanie;1241949;186;15.0;28.4;129.6
+35;Ille-et-Vilaine;Bretagne;1129874;94;8.3;22.9;134.4
+36;Indre;Centre-Val de Loire;215000;8;3.7;10.2;80.0
+37;Indre-et-Loire;Centre-Val de Loire;621115;73;11.8;27.9;132.0
+38;Isère;Auvergne-Rhône-Alpes;1304945;131;10.0;20.8;111.5
+39;Jura;Bourgogne-Franche-Comté;257588;13;5.0;16.3;102.1
+40;Landes;Nouvelle-Aquitaine;437955;23;5.3;14.8;104.3
+41;Loir-et-Cher;Centre-Val de Loire;328061;28;8.5;12.8;101.5
+42;Loire;Auvergne-Rhône-Alpes;775377;51;6.6;19.0;87.4
+43;Haute-Loire;Auvergne-Rhône-Alpes;228850;16;7.0;18.4;83.5
+44;Loire-Atlantique;Pays de la Loire;1499333;138;9.2;23.9;117.1
+45;Loiret;Centre-Val de Loire;693193;35;5.0;11.8;86.8
+46;Lot;Occitanie;176770;8;4.5;18.1;88.3
+47;Lot-et-Garonne;Nouvelle-Aquitaine;334441;10;3.0;11.7;104.1
+48;Lozère;Occitanie;76473;4;5.2;18.3;129.5
+49;Maine-et-Loire;Pays de la Loire;837086;62;7.4;22.1;117.4
+50;Manche;Normandie;497681;13;2.6;11.7;79.4
+51;Marne;Grand Est;560932;40;7.1;24.1;107.5
+52;Haute-Marne;Grand Est;167185;5;3.0;11.4;101.1
+53;Mayenne;Pays de la Loire;304794;13;4.3;9.8;85.0
+54;Meurthe-et-Moselle;Grand Est;731137;77;10.5;24.6;123.4
+55;Meuse;Grand Est;179279;5;2.8;7.3;104.9
+56;Morbihan;Bretagne;788761;49;6.2;18.1;89.3
+57;Moselle;Grand Est;1050916;53;5.0;15.1;81.5
+58;Nièvre;Bourgogne-Franche-Comté;200818;9;4.5;11.5;110.0
+59;Nord;Hauts-de-France;2615021;155;5.9;21.2;130.1
+60;Oise;Hauts-de-France;828901;28;3.4;11.5;88.3
+61;Orne;Normandie;273958;7;2.6;10.6;108.4
+62;Pas-de-Calais;Hauts-de-France;1454949;40;2.7;12.6;77.8
+63;Puy-de-Dôme;Auvergne-Rhône-Alpes;664361;96;14.4;29.8;95.0
+64;Pyrénées-Atlantiques;Nouvelle-Aquitaine;711995;83;11.7;26.7;110.8
+65;Hautes-Pyrénées;Occitanie;231783;15;6.5;19.8;109.2
+66;Pyrénées-Orientales;Occitanie;501089;36;7.2;17.8;92.2
+67;Bas-Rhin;Grand Est;1167537;164;14.0;28.0;95.7
+68;Haut-Rhin;Grand Est;770839;47;6.1;15.7;98.2
+69;Rhône;Auvergne-Rhône-Alpes;1922269;321;16.7;39.4;151.4
+70;Haute-Saône;Bourgogne-Franche-Comté;232484;9;3.9;16.8;106.2
+71;Saône-et-Loire;Bourgogne-Franche-Comté;549723;37;6.7;16.7;81.5
+72;Sarthe;Pays de la Loire;566239;22;3.9;12.2;85.7
+73;Savoie;Auvergne-Rhône-Alpes;450419;37;8.2;18.4;125.4
+74;Haute-Savoie;Auvergne-Rhône-Alpes;868714;68;7.8;18.2;111.1
+75;Paris;Île-de-France;2084894;1281;61.4;102.4;291.5
+76;Seine-Maritime;Normandie;1261327;84;6.7;20.7;112.6
+77;Seine-et-Marne;Île-de-France;1479706;65;4.4;12.0;90.7
+78;Yvelines;Île-de-France;1495123;112;7.5;21.0;111.1
+79;Deux-Sèvres;Nouvelle-Aquitaine;375205;12;3.2;11.2;106.6
+80;Somme;Hauts-de-France;563892;39;6.9;19.0;106.9
+81;Tarn;Occitanie;399124;19;4.8;20.8;106.2
+82;Tarn-et-Garonne;Occitanie;266620;6;2.3;11.6;96.4
+83;Var;Provence-Alpes-Côte d'Azur;1129201;112;9.9;19.4;82.1
+84;Vaucluse;Provence-Alpes-Côte d'Azur;574523;48;8.4;21.8;96.4
+85;Vendée;Pays de la Loire;719419;19;2.6;8.9;73.1
+86;Vienne;Nouvelle-Aquitaine;438156;14;3.2;23.1;126.9
+87;Haute-Vienne;Nouvelle-Aquitaine;373138;32;8.6;28.9;101.0
+88;Vosges;Grand Est;355483;10;2.8;10.7;87.5
+89;Yonne;Bourgogne-Franche-Comté;331426;21;6.3;13.0;89.6
+90;Territoire de Belfort;Bourgogne-Franche-Comté;140174;11;7.8;16.4;87.7
+91;Essonne;Île-de-France;1347483;82;6.1;16.5;100.8
+92;Hauts-de-Seine;Île-de-France;1661465;167;10.1;23.1;136.9
+93;Seine-Saint-Denis;Île-de-France;1718265;81;4.7;18.6;96.7
+94;Val-de-Marne;Île-de-France;1430965;113;7.9;30.4;120.3
+95;Val-d'Oise;Île-de-France;1289641;68;5.3;16.4;104.8
+971;Guadeloupe;Guadeloupe;383889;12;3.1;17.5;78.4
+972;Martinique;Martinique;360227;12;3.3;20.8;67.2
+973;Guyane;Guyane;296151;2;0.7;6.8;70.9
+974;La Réunion;La Réunion;897613;62;6.9;25.0;77.9
+976;Mayotte;Mayotte;320646;1;0.3;2.2;22.5
