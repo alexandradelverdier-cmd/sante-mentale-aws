@@ -54,7 +54,15 @@ models:
             combination_of_columns: [annee, departement_code]
     columns:
       - name: population
-        description: "Vide si le code département DREES ne se raccorde pas à l'INSEE"
-        tests: [not_null]
+        description: >
+          Vide si le code département DREES ne se raccorde pas à l'INSEE.
+          Exception connue : Mayotte (976) en 2012-2013, hors du champ des estimations INSEE avant 2014.
+        tests:
+          - not_null:
+              config:
+                where: "not (departement_code = '976' and annee < 2014)"
       - name: departement_libelle
-        tests: [not_null]
+        tests:
+          - not_null:
+              config:
+                where: "not (departement_code = '976' and annee < 2014)"
