@@ -8,3 +8,5 @@ sources:
     tables:
       - name: insee_population_region_sexe_gca
         description: "Population au 1er janvier par région, sexe et grande classe d'âge, 1975-2026"
+      - name: insee_population_departement_sexe_gca
+        description: "Population au 1er janvier par département, sexe et grande classe d'âge, 1975-2026"

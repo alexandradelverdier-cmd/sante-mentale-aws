@@ -42,3 +42,19 @@ models:
         tests: [not_null]
       - name: taux_std_antidepresseurs
         tests: [not_null]
+
+  - name: mart_offre__departement_annee
+    description: >
+      Offre de soins en santé mentale par département : psychiatres (total, libéraux et mixtes, hospitaliers)
+      et psychologues, effectifs et densités pour 100 000 habitants, 2012-2026. Mayotte incluse.
+      Quartiles calculés par année (1 = les moins dotés).
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns: [annee, departement_code]
+    columns:
+      - name: population
+        description: "Vide si le code département DREES ne se raccorde pas à l'INSEE"
+        tests: [not_null]
+      - name: departement_libelle
+        tests: [not_null]
