@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: sae
+    description: "Statistique annuelle des établissements de santé (DREES), série longue CAPACT_PM_PNM, ingérée par ingestion/ingest_sae_psychiatrie.py"
+    database: awsdatacatalog
+    schema: sante_mentale_raw
+    tables:
+      - name: sae_capacites_psychiatrie
+        description: "Capacités et activité en psychiatrie (générale et infanto-juvénile confondues), établissement x année, 2000-2024"

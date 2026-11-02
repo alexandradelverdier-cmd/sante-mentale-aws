@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: stg_sae__capacites_psychiatrie
+    description: >
+      Capacités en psychiatrie par établissement et année (SAE, 2000-2024). Psychiatrie générale et
+      infanto-juvénile confondues. Une ligne sans département (30 lits, 2016) est exclue à l'ingestion.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns: [annee, finess_etablissement]
+    columns:
+      - name: departement_code
+        tests: [not_null]
+      - name: region_insee_code
+        tests:
+          - relationships:
+              arguments:
+                to: ref('ref_regions_insee')
+                field: region_insee_code

@@ -24,7 +24,7 @@ select
     c.region_code,
     r.region_libelle,
     p.population_1er_janvier,
-    -- Offre (stocks au 1er janvier, pour 100 000 habitants)
+    -- Offre de professionnels (stocks au 1er janvier, pour 100 000 habitants)
     o.nb_psychiatres,
     round(100000.0 * o.nb_psychiatres / p.population_1er_janvier, 1)                  as densite_psychiatres,
     round(100000.0 * o.nb_psychiatres_liberaux_mixtes / p.population_1er_janvier, 1)  as densite_psychiatres_liberaux_mixtes,
@@ -32,6 +32,11 @@ select
     o.nb_psychologues,
     round(100000.0 * o.nb_psychologues / p.population_1er_janvier, 1)                 as densite_psychologues,
     round(100000.0 * o.nb_psychologues_liberaux_mixtes / p.population_1er_janvier, 1) as densite_psychologues_liberaux_mixtes,
+    -- Offre hospitalière (SAE, pour 100 000 habitants)
+    o.nb_lits_psychiatrie,
+    o.nb_places_psychiatrie,
+    round(100000.0 * o.nb_lits_psychiatrie / p.population_1er_janvier, 1)             as densite_lits_psychiatrie,
+    round(100000.0 * o.nb_places_psychiatrie / p.population_1er_janvier, 1)           as densite_places_psychiatrie,
     -- Consommation (taux standardisés âge x sexe, pour 1 000 habitants)
     c.taux_std_antidepresseurs,
     c.taux_std_anxiolytiques,
