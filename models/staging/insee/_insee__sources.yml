@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: insee
+    description: "Estimations de population INSEE, ingérées par ingestion/ingest_insee_population.py"
+    database: awsdatacatalog
+    schema: sante_mentale_raw
+    tables:
+      - name: insee_population_region_sexe_gca
+        description: "Population au 1er janvier par région, sexe et grande classe d'âge, 1975-2026"

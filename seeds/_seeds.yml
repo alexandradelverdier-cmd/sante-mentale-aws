@@ -35,3 +35,7 @@ seeds:
     columns:
       - name: atc5_code
         tests: [unique, not_null]
+  - name: ref_classes_age_insee
+    description: "Regroupement des grandes classes d'âge INSEE dans les tranches Open Medic."
+    config:
+      column_types: {tranche_age_code: varchar}

@@ -12,3 +12,18 @@ models:
     columns:
       - name: nb_consommants
         tests: [not_null]
+
+  - name: mart_psychotropes__taux_region_annee
+    description: >
+      Taux de consommants de psychotropes pour 1 000 habitants, par région, classe et année, 2014-2025.
+      Taux brut (population moyenne de l'année) et taux standardisé sur l'âge et le sexe
+      (référence : France entière 2025). Régions connues uniquement.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns: [annee, region_code, classe_courte]
+    columns:
+      - name: taux_brut_pour_1000
+        tests: [not_null]
+      - name: taux_standardise_pour_1000
+        tests: [not_null]
