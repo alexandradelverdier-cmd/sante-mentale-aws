@@ -2,7 +2,7 @@
 
 Projet personnel d'analytics engineering sur une stack AWS (S3, Athena, dbt).
 
-Infirmière pendant 8 ans, dont plusieurs années en psychiatrie et neurologie au Centre Hospitalier de Montauban, j'ai voulu objectiver une question que j'ai rencontrée sur le terrain : **les territoires qui manquent de psychiatres et de psychologues consomment-ils davantage de psychotropes ?** L'idée sous-jacente : faute d'accès à un spécialiste, le médecin généraliste compenserait par le médicament.
+Infirmière pendant 8 ans, dont plusieurs années en psychiatrie en centre hospitalier, j'ai voulu objectiver une question que j'ai rencontrée sur le terrain : **les territoires qui manquent de psychiatres et de psychologues consomment-ils davantage de psychotropes ?** L'idée sous-jacente : faute d'accès à un spécialiste, le médecin généraliste compenserait par le médicament.
 
 ![Densité de psychiatres libéraux par département en 2024](docs/carte_psychiatres_liberaux_2024.png)
 
