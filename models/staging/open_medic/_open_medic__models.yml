@@ -22,3 +22,25 @@ models:
                 values: ['1', '2', '9']
       - name: nb_consommants
         tests: [not_null]
+
+  - name: stg_open_medic__base
+    description: >
+      Boîtes délivrées et montants par présentation (CIP13), tranche d'âge, sexe, région,
+      spécialité du prescripteur et année, 2014-2025. Libellés absents en 2014-2015.
+    columns:
+      - name: annee
+        tests: [not_null]
+      - name: cip13_code
+        tests: [not_null]
+      - name: tranche_age_code
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['0', '20', '60', '99']
+      - name: sexe_code
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['1', '2', '9']
+      - name: nb_boites
+        tests: [not_null]

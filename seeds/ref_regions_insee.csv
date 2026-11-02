@@ -1,0 +1,19 @@
+region_code,region_insee_code,region_insee_libelle
+5,01,Guadeloupe
+5,02,Martinique
+5,03,Guyane
+5,04,La Réunion
+5,06,Mayotte
+11,11,Île-de-France
+24,24,Centre-Val de Loire
+27,27,Bourgogne-Franche-Comté
+28,28,Normandie
+32,32,Hauts-de-France
+44,44,Grand Est
+52,52,Pays de la Loire
+53,53,Bretagne
+75,75,Nouvelle-Aquitaine
+76,76,Occitanie
+84,84,Auvergne-Rhône-Alpes
+93,93,Provence-Alpes-Côte d'Azur
+93,94,Corse

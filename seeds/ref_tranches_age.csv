@@ -1,0 +1,5 @@
+tranche_age_code,tranche_age_libelle,ordre
+0,0-19 ans,1
+20,20-59 ans,2
+60,60 ans et plus,3
+99,Âge inconnu,9

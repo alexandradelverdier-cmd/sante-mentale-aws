@@ -1,0 +1,16 @@
+region_code,region_libelle_open_medic,region_libelle,est_region_connue
+5,Régions et départements d'outre-mer,Outre-mer (DROM),true
+11,Ile-de-France,Île-de-France,true
+24,Centre-Val de Loire,Centre-Val de Loire,true
+27,Bourgogne-Franche-Comté,Bourgogne-Franche-Comté,true
+28,Normandie,Normandie,true
+32,Nord-Pas-de-Calais-Picardie,Hauts-de-France,true
+44,Alsace-Champagne-Ardenne-Lorraine,Grand Est,true
+52,Pays de la Loire,Pays de la Loire,true
+53,Bretagne,Bretagne,true
+75,Aquitaine-Limousin-Poitou-Charentes,Nouvelle-Aquitaine,true
+76,Languedoc-Roussillon-Midi-Pyrénées,Occitanie,true
+84,Auvergne-Rhône-Alpes,Auvergne-Rhône-Alpes,true
+93,Provence-Alpes-Côte d'Azur et Corse,PACA et Corse,true
+0,Inconnu,Inconnue,false
+99,Inconnu,Inconnue ou masquée (secret statistique),false

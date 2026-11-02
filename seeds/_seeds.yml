@@ -1,0 +1,32 @@
+version: 2
+
+seeds:
+  - name: ref_regions
+    description: "Régions Open Medic (descriptif officiel 2024). 5 = DROM regroupés, 93 = PACA + Corse, 0 et 99 = inconnu."
+    config:
+      column_types: {region_code: varchar, est_region_connue: boolean}
+    columns:
+      - name: region_code
+        tests: [unique, not_null]
+  - name: ref_regions_insee
+    description: "Passage des régions Open Medic vers les codes région INSEE, pour agréger les populations au même périmètre."
+    config:
+      column_types: {region_code: varchar, region_insee_code: varchar}
+  - name: ref_tranches_age
+    config:
+      column_types: {tranche_age_code: varchar}
+  - name: ref_sexe
+    config:
+      column_types: {sexe_code: varchar}
+  - name: ref_prescripteurs
+    description: "Spécialité du prescripteur. Attention : les psychiatres hospitaliers sont dans le code 90 (salariés), pas dans le 17."
+    config:
+      column_types: {prescripteur_specialite_code: varchar}
+    columns:
+      - name: prescripteur_specialite_code
+        tests: [unique, not_null]
+  - name: ref_classes_psychotropes
+    description: "Classes ATC3 retenues comme psychotropes pour le projet."
+    columns:
+      - name: atc3_code
+        tests: [unique, not_null]

@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: int_atc__referentiel
+    description: "Une ligne par molécule ATC5, libellés de l'année la plus récente (2016+)."
+    columns:
+      - name: atc5_code
+        tests: [unique, not_null]
+
+  - name: int_open_medic__consommants_psy
+    description: >
+      Consommants de psychotropes (N05A, N05B, N05C, N06A, N06B) par molécule, âge, sexe, région et année.
+      Le nombre de consommants ne s'additionne pas entre molécules.
+    columns:
+      - name: region_code
+        tests:
+          - relationships:
+              arguments:
+                to: ref('ref_regions')
+                field: region_code
+      - name: tranche_age_code
+        tests:
+          - relationships:
+              arguments:
+                to: ref('ref_tranches_age')
+                field: tranche_age_code
+      - name: atc5_libelle
+        tests:
+          - not_null:
+              config:
+                severity: warn

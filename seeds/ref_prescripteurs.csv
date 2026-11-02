@@ -1,0 +1,28 @@
+prescripteur_specialite_code,prescripteur_libelle,prescripteur_groupe
+1,Médecine générale libérale,Médecin généraliste
+2,Anesthésiologie - réanimation libérale,Autre spécialiste libéral
+3,Pathologie cardio-vasculaire libérale,Autre spécialiste libéral
+4,Chirurgie libérale,Autre spécialiste libéral
+5,Dermatologie et vénérologie libérale,Autre spécialiste libéral
+6,Radiologie libérale,Autre spécialiste libéral
+7,Gynécologie obstétrique libérale,Autre spécialiste libéral
+8,Gastro-entérologie et hépatologie libérale,Autre spécialiste libéral
+9,Médecine interne libérale,Autre spécialiste libéral
+11,Oto-rhino-laryngologie libérale,Autre spécialiste libéral
+12,Pédiatrie libérale,Autre spécialiste libéral
+13,Pneumologie libérale,Autre spécialiste libéral
+14,Rhumatologie libérale,Autre spécialiste libéral
+15,Ophtalmologie libérale,Autre spécialiste libéral
+17,Psychiatrie libérale,Psychiatre libéral
+18,Stomatologie libérale,Autre spécialiste libéral
+19,Chirurgie dentaire,Autre prescripteur de ville
+31,Médecine physique et de réadaptation libérale,Autre spécialiste libéral
+32,Neurologie libérale,Neurologue libéral
+35,Néphrologie libérale,Autre spécialiste libéral
+36,Chirurgie dentaire (ODF),Autre prescripteur de ville
+37,Anatomie-cytologie-pathologique libérale,Autre spécialiste libéral
+38,Directeur de laboratoire médecin libéral,Autre spécialiste libéral
+42,Endocrinologie et métabolismes libéral,Autre spécialiste libéral
+90,Prescripteurs salariés (surtout hôpital public),Salarié / hôpital
+98,Prescripteurs de ville autres que médecins,Autre prescripteur de ville
+99,Valeur inconnue,Inconnu
