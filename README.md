@@ -12,13 +12,15 @@ Infirmière pendant 8 ans, dont plusieurs années en psychiatrie et neurologie a
 
 **2. De forts écarts régionaux, qui ne s'expliquent pas par l'âge.** À structure d'âge et de sexe identique, la Normandie compte 119 consommants d'antidépresseurs pour 1 000 habitants en 2025, contre 87 en Île-de-France (+37 %).
 
-**3. Pas de lien démontré entre offre et consommation à l'échelle régionale.** La corrélation entre densité de psychiatres et consommation d'antidépresseurs vaut -0,37 sur les 12 régions de métropole, mais elle est entièrement portée par l'Île-de-France : sans elle, elle tombe à 0,08, et la corrélation de rangs (Spearman) vaut 0,03. L'hypothèse de départ n'est pas confirmée à cette maille.
+**3. Pas de lien démontré entre offre et consommation à l'échelle régionale.** La corrélation entre densité de psychiatres et consommation d'antidépresseurs vaut -0,37 sur les 12 régions de métropole, mais elle est entièrement portée par l'Île-de-France : sans elle, elle tombe à 0,08, et la corrélation de rangs (Spearman) vaut 0,03. L'analyse dans le temps (2014-2024) aboutit au même constat : en suivant l'évolution de chaque région, aucun lien n'apparaît entre la progression de l'offre et celle de la consommation une fois l'Île-de-France retirée (corrélation de 0,07 pour les psychiatres, de -0,11 pour les psychologues). L'Île-de-France est la seule région qui crée une relation apparente, dans les deux approches. L'hypothèse de départ n'est pas confirmée à cette maille.
 
 **4. Une offre libérale très inégale, structurée par les CHU.** En 2024, Paris compte 61,4 psychiatres libéraux pour 100 000 habitants, l'Aube 1,9. Les départements les mieux dotés sont ceux des grandes métropoles universitaires ; les moins dotés sont souvent ruraux ou périurbains et voisins de ces métropoles (Eure-et-Loir, Tarn-et-Garonne, Ardèche). L'hôpital compense en partie, les psychologues non.
 
 **5. Une convergence trop lente.** Entre 2014 et 2026, les psychiatres libéraux progressent davantage dans les départements les moins dotés (+23 %) que dans les mieux dotés (+2 %), mais sur des effectifs si faibles que le nombre de départements sous 3 psychiatres libéraux pour 100 000 habitants reste stable (entre 13 et 17).
 
 **6. Deux trajectoires d'offre opposées.** Entre 2012 et 2024, le nombre de psychologues a doublé (de 38 000 à 77 000), tandis que celui des psychiatres n'a progressé que de 10 %.
+
+**7. Deux tendances de consommation opposées.** Entre 2014 et 2024, la consommation standardisée d'antidépresseurs augmente dans toutes les régions de métropole, tandis que celle d'anxiolytiques recule partout, de 9 à 30 consommants pour 1 000 habitants selon les régions.
 
 ## Architecture
 
@@ -113,7 +115,6 @@ dbt build
 
 ## Pistes
 
-- Analyse en panel (2014-2025) : l'évolution de l'offre précède-t-elle celle de la consommation ?
 - Intégration des capacités hospitalières en psychiatrie (SAE, DREES) et des temps d'accès aux soins.
 - Orchestration de l'ingestion (EventBridge et Lambda, ou Step Functions).
 - Visualisation cartographique des déserts psychiatriques par département.
