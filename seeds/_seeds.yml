@@ -30,3 +30,8 @@ seeds:
     columns:
       - name: atc3_code
         tests: [unique, not_null]
+  - name: ref_atc5_complements
+    description: "Libellés des codes ATC5 présents uniquement en 2014-2015, absents du référentiel construit sur 2016+."
+    columns:
+      - name: atc5_code
+        tests: [unique, not_null]

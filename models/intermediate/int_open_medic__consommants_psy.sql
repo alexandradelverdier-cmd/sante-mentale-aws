@@ -16,7 +16,7 @@ select
     p.classe_courte,
     p.classe_libelle,
     c.atc5_code,
-    coalesce(c.atc5_libelle, r.atc5_libelle) as atc5_libelle,
+    coalesce(c.atc5_libelle, r.atc5_libelle, k.atc5_libelle) as atc5_libelle,
     c.nb_consommants,
     c.nb_boites,
     c.montant_rembourse
@@ -25,3 +25,5 @@ inner join {{ ref('ref_classes_psychotropes') }} as p
     on c.atc3_code = p.atc3_code
 left join {{ ref('int_atc__referentiel') }} as r
     on c.atc5_code = r.atc5_code
+left join {{ ref('ref_atc5_complements') }} as k
+    on c.atc5_code = k.atc5_code
