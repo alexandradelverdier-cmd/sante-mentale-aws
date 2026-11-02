@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: mart_psychotropes__region_annee
+    description: >
+      Consommants de psychotropes par région, classe (antidépresseurs, anxiolytiques, hypnotiques,
+      antipsychotiques, psychostimulants) et année, 2014-2025. Table Parquet.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns: [annee, region_code, classe_courte]
+    columns:
+      - name: nb_consommants
+        tests: [not_null]

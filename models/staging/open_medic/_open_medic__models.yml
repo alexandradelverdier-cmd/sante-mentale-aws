@@ -44,3 +44,21 @@ models:
                 values: ['1', '2', '9']
       - name: nb_boites
         tests: [not_null]
+
+  - name: stg_open_medic__consommants_atc3
+    description: >
+      Nombre de personnes ayant consommé au moins un médicament de la classe ATC3,
+      par âge, sexe, région et année, 2014-2025. Pas de double compte au sein d'une classe.
+    columns:
+      - name: annee
+        tests: [not_null]
+      - name: atc3_code
+        tests: [not_null]
+      - name: region_code
+        tests:
+          - relationships:
+              arguments:
+                to: ref('ref_regions')
+                field: region_code
+      - name: nb_consommants
+        tests: [not_null]

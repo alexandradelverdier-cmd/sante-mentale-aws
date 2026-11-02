@@ -14,3 +14,7 @@ sources:
         description: "Consommants 2016+, grain ATC5 x âge x sexe x région x année"
       - name: open_medic_consommants_v2014
         description: "Consommants 2014-2015, sans libellé ATC5"
+      - name: open_medic_consommants_atc3
+        description: "Consommants par classe ATC3 2016+, grain ATC3 x âge x sexe x région x année"
+      - name: open_medic_consommants_atc3_v2014
+        description: "Consommants par classe ATC3 2014-2015, sans libellé"
