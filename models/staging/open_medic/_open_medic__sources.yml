@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: open_medic
+    description: "Open Medic (Assurance Maladie), ingéré dans S3 par ingestion/ingest_open_medic.sh"
+    database: awsdatacatalog
+    schema: sante_mentale_raw
+    tables:
+      - name: open_medic_base
+        description: "Base complète 2016+, grain CIP13 x âge x sexe x région x spécialité prescripteur x année"
+      - name: open_medic_base_v2014
+        description: "Base complète 2014-2015, même grain, sans libellés"
+      - name: open_medic_consommants
+        description: "Consommants 2016+, grain ATC5 x âge x sexe x région x année"
+      - name: open_medic_consommants_v2014
+        description: "Consommants 2014-2015, sans libellé ATC5"
