@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: stg_drees__psychiatres
+    description: "Psychiatres au 1er janvier, grain : département x mode d'exercice x année."
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns: [annee, departement_code, exercice_code]
+    columns:
+      - name: nb_psychiatres
+        tests: [not_null]
+  - name: stg_drees__psychologues
+    description: >
+      Psychologues au 1er janvier, grain : département x mode d'exercice x année.
+      Mayotte (976) absente du répertoire ADELI en 2012-2013 : effectifs nuls (inconnus, pas zéro).
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns: [annee, departement_code, exercice_code]
+    columns:
+      - name: nb_psychologues
+        tests:
+          - not_null:
+              config:
+                where: "not (departement_code = '976' and annee < 2014)"

@@ -27,3 +27,18 @@ models:
         tests: [not_null]
       - name: taux_standardise_pour_1000
         tests: [not_null]
+
+  - name: mart_sante_mentale__region_annee
+    description: >
+      Mart central du projet : offre de soins en santé mentale (psychiatres, psychologues pour 100 000 hab.)
+      et consommation de psychotropes (taux standardisés pour 1 000 hab.), par région et année, 2014-2025.
+      Psychologues disponibles jusqu'en 2024 seulement.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns: [annee, region_code]
+    columns:
+      - name: densite_psychiatres
+        tests: [not_null]
+      - name: taux_std_antidepresseurs
+        tests: [not_null]
