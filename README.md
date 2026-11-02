@@ -91,6 +91,15 @@ Les référentiels (régions, tranches d'âge, prescripteurs, classes de psychot
 - **Anomalie 2025** : l'Assurance Maladie a corrigé en juillet 2026 la région des bénéficiaires 2025. La catégorie « inconnue » est divisée par deux entre 2024 et 2025, ce qui gonfle très légèrement la hausse régionale 2025 (0,3 point au plus).
 - **Mayotte** : absente des estimations INSEE et du répertoire ADELI avant 2014. Ces valeurs restent nulles (inconnues, et non égales à zéro) et sont déclarées comme exceptions dans les tests.
 
+## Méthode de travail
+
+Chaque étape a été vérifiée par les données avant d'être retenue :
+
+- **Contrôles à chaque ingestion** : les totaux recalculés sont confrontés aux chiffres officiels (16 199 psychiatres recalculés pour 16 200 publiés par la DREES, population identique à l'habitant près entre les fichiers régional et départemental de l'INSEE).
+- **Hypothèses testées, et parfois rejetées** : deux pistes initiales (des inégalités départementales qui se creuseraient, un hôpital qui compenserait les déserts libéraux) ont été contredites par les requêtes, et les conclusions corrigées en conséquence.
+- **Tests dbt comme garde-fous** : ils ont bloqué plusieurs anomalies (valeurs manquantes de Mayotte avant 2014, effectifs vides) avant qu'elles n'atteignent les résultats.
+- **Lisibilité jugée sur pièce** : la première version de la carte, en dégradé d'une seule couleur, ne faisait pas ressortir les déserts ; elle a été refaite avec une échelle centrée sur la médiane nationale.
+
 ## Limites
 
 - **Maille régionale** : Open Medic ne descend pas sous la région, ce qui empêche de tester l'hypothèse offre / consommation au niveau des départements, où les écarts d'offre sont les plus marqués.
