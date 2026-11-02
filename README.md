@@ -14,18 +14,18 @@ Infirmière pendant 8 ans, dont plusieurs années en psychiatrie et neurologie a
 
 **3. Pas de lien démontré entre offre et consommation à l'échelle régionale.** La corrélation entre densité de psychiatres et consommation d'antidépresseurs vaut -0,37 sur les 12 régions de métropole, mais elle est entièrement portée par l'Île-de-France : sans elle, elle tombe à 0,08, et la corrélation de rangs (Spearman) vaut 0,03. L'analyse dans le temps (2014-2024) aboutit au même constat : en suivant l'évolution de chaque région, aucun lien n'apparaît entre la progression de l'offre et celle de la consommation une fois l'Île-de-France retirée (corrélation de 0,07 pour les psychiatres, de -0,11 pour les psychologues). L'Île-de-France est la seule région qui crée une relation apparente, dans les deux approches. L'hypothèse de départ n'est pas confirmée à cette maille.
 
-**4. Une offre libérale très inégale, structurée par les CHU.** En 2024, Paris compte 61,4 psychiatres libéraux pour 100 000 habitants, l'Aube 1,9. Les départements les mieux dotés sont ceux des grandes métropoles universitaires ; les moins dotés sont souvent ruraux ou périurbains et voisins de ces métropoles (Eure-et-Loir, Tarn-et-Garonne, Ardèche). L'hôpital compense en partie, les psychologues non.
+**4. Une offre libérale très inégale, structurée par les CHU.** En 2024, Paris compte 61,4 psychiatres libéraux pour 100 000 habitants, l'Aube 1,9. Les départements les mieux dotés sont ceux des grandes métropoles universitaires ; les moins dotés sont souvent ruraux ou périurbains et voisins de ces métropoles (Eure-et-Loir, Tarn-et-Garonne, Ardèche). Ces déserts se cumulent : le quart des départements les moins dotés en psychiatres libéraux compte aussi 2 fois moins de psychiatres hospitaliers, 20 % de lits de psychiatrie et 24 % de psychologues en moins que le quart le mieux doté. Seules les places d'hôpital de jour sont réparties de façon homogène.
 
 **5. Une convergence trop lente.** Entre 2014 et 2026, les psychiatres libéraux progressent davantage dans les départements les moins dotés (+23 %) que dans les mieux dotés (+2 %), mais sur des effectifs si faibles que le nombre de départements sous 3 psychiatres libéraux pour 100 000 habitants reste stable (entre 13 et 17).
 
-**6. Deux trajectoires d'offre opposées.** Entre 2012 et 2024, le nombre de psychologues a doublé (de 38 000 à 77 000), tandis que celui des psychiatres n'a progressé que de 10 %.
+**6. Deux trajectoires d'offre opposées.** Entre 2012 et 2024, le nombre de psychologues a doublé (de 38 000 à 77 000), tandis que celui des psychiatres n'a progressé que de 10 %. À l'hôpital, la psychiatrie a perdu 19 % de ses lits entre 2000 et 2024 (de 62 800 à 50 600), et les places d'hôpital de jour créées (+3 800) ne compensent pas les fermetures : la capacité totale recule de 7 % depuis 2014.
 
 **7. Deux tendances de consommation opposées.** Entre 2014 et 2024, la consommation standardisée d'antidépresseurs augmente dans toutes les régions de métropole, tandis que celle d'anxiolytiques recule partout, de 9 à 30 consommants pour 1 000 habitants selon les régions.
 
 ## Architecture
 
 ```
-Open Medic (Assurance Maladie)   INSEE (population)   DREES (RPPS, ADELI)
+Open Medic (Assurance Maladie)   INSEE (population)   DREES (RPPS, ADELI, SAE)
               │                         │                    │
               └──── scripts d'ingestion (bash, Python) depuis AWS CloudShell ────┘
                                         │
@@ -48,6 +48,7 @@ Open Medic (Assurance Maladie)   INSEE (population)   DREES (RPPS, ADELI)
 | [Open Medic](https://www.data.gouv.fr/datasets/open-medic-base-complete-sur-les-depenses-de-medicaments-interregimes) (Assurance Maladie) | Médicaments remboursés en ville, nombre de consommants | Molécule ou classe x âge x sexe x région | 2014-2025 |
 | [Estimations de population](https://www.insee.fr/fr/statistiques/8721456) (INSEE) | Population au 1er janvier | Région ou département x sexe x âge | 1975-2026 |
 | [Démographie des professionnels de santé](https://www.data.gouv.fr/datasets/la-demographie-des-professionnels-de-sante-depuis-2012) (DREES) | Psychiatres (RPPS), psychologues (ADELI) | Département x mode d'exercice | 2012-2026 (psychologues : 2012-2024) |
+| [Statistique annuelle des établissements de santé](https://data.drees.solidarites-sante.gouv.fr/explore/dataset/708_bases-statistiques-sae/information/) (DREES, série CAPACT) | Lits et places de psychiatrie | Établissement x année | 2000-2024 |
 
 ## Modélisation dbt
 
@@ -59,6 +60,7 @@ staging          stg_open_medic__consommants        consommants par molécule (A
                  stg_insee__population_departement  population départementale
                  stg_drees__psychiatres             psychiatres par département
                  stg_drees__psychologues            psychologues par département
+                 stg_sae__capacites_psychiatrie     lits et places par établissement
 
 intermediate     int_atc__referentiel               libellés ATC de référence
                  int_open_medic__consommants_psy    consommants de psychotropes par molécule
@@ -96,7 +98,8 @@ Les référentiels (régions, tranches d'âge, prescripteurs, classes de psychot
 - **La consommation n'est qu'un indicateur indirect du besoin** : elle reflète aussi les habitudes de prescription, l'accès aux soins et la précarité.
 - **Standardisation grossière** : Open Medic ne fournit que trois tranches d'âge (0-19, 20-59, 60 ans et plus).
 - **Mayotte** : sa couverture par Open Medic n'est pas confirmée. Elle est exclue des dénominateurs régionaux par défaut, hypothèse paramétrable dans le seed `ref_regions_insee` (colonne `inclus_denominateur`). L'inclure fait baisser le taux des DROM d'environ 15 %.
-- **Pédopsychiatrie** : incluse dans la psychiatrie, sans distinction possible dans les données DREES.
+- **Pédopsychiatrie** : incluse dans la psychiatrie, sans distinction possible dans les données DREES (démographie comme capacités hospitalières).
+- **Lits localisés au lieu de l'établissement** : un établissement peut accueillir des patients des départements voisins, ce qui surestime la densité de lits de son département et sous-estime celle de ses voisins.
 - **Populations récentes** : provisoires (2024) ou précoces (2025-2026), elles seront révisées par l'INSEE.
 
 ## Reproduire le projet
@@ -115,7 +118,7 @@ dbt build
 
 ## Pistes
 
-- Intégration des capacités hospitalières en psychiatrie (SAE, DREES) et des temps d'accès aux soins.
+- Intégration des temps d'accès aux soins (distance au premier psychiatre ou au premier établissement).
 - Orchestration de l'ingestion (EventBridge et Lambda, ou Step Functions).
 - Visualisation cartographique des déserts psychiatriques par département.
 
